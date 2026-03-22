@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 import { AdminNav } from "@/components/AdminNav";
 import { dateOnlyTodayUTC, toYYYYMMDD } from "@/lib/dates";
 
+export const dynamic = "force-dynamic";
+
 export default async function BandColoursPage() {
   const today = dateOnlyTodayUTC();
 

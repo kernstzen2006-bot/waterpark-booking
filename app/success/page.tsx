@@ -4,6 +4,8 @@ import { toYYYYMMDD } from "@/lib/dates";
 import Link from "next/link";
 import { PopUpload } from "./ui";
 
+export const dynamic = "force-dynamic";
+
 export default async function SuccessPage({ searchParams }: { searchParams: Record<string, string | undefined> }) {
   const orderId = searchParams.orderId ?? "";
   const order = orderId

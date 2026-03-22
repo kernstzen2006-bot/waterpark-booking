@@ -3,6 +3,8 @@ import { AdminNav } from "@/components/AdminNav";
 import { formatZar } from "@/lib/money";
 import { toYYYYMMDD } from "@/lib/dates";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminOrderPage({ params }: { params: { id: string } }) {
   const order = await prisma.order.findUnique({
     where: { id: params.id },

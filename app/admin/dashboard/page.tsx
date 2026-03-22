@@ -4,6 +4,8 @@ import Link from "next/link";
 import { formatZar } from "@/lib/money";
 import { toYYYYMMDD } from "@/lib/dates";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminDashboard() {
   const orders = await prisma.order.findMany({
     select: {

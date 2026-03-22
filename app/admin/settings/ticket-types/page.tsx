@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 import { AdminNav } from "@/components/AdminNav";
 import { TicketTypeEditor } from "@/components/TicketTypeEditor";
 
+export const dynamic = "force-dynamic";
+
 export default async function TicketTypesSettings() {
   const rows = await prisma.ticketType.findMany({ orderBy: { basePrice: "desc" } });
 

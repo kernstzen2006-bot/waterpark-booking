@@ -2,6 +2,8 @@ import { parseDateOnlyFromYYYYMMDD, toYYYYMMDD } from "@/lib/dates";
 import { getActiveTicketTypes } from "@/lib/ticketTypes";
 import { CheckoutClient } from "./ui";
 
+export const dynamic = "force-dynamic";
+
 export default async function CheckoutPage({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
   const dateStr = typeof searchParams.date === "string" ? searchParams.date : "";
   const visitDate = parseDateOnlyFromYYYYMMDD(dateStr);
